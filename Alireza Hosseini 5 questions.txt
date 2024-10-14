@@ -1,0 +1,35 @@
+shortest_name_email = df['Email'][df['Name'].str.len().idxmin()]
+question3 = f"ایمیل فردی که نام کوتاه‌تری دارد چیست؟"
+print(question3)
+print(f"پاسخ: {shortest_name_email}\n")
+
+================================================
+
+most_frequent_ip = df['IP Address'].mode()[0]
+question4 = f"بیشترین آدرس IP در این DataFrame چیست؟"
+print(question4)
+print(f"پاسخ: {most_frequent_ip}\n")
+
+================================================
+
+shortest_name = df['Name'][df['Name'].str.len().idxmin()]
+question5 = f"کدام فرد نام کوتاه‌تری دارد؟"
+print(question5)
+print(f"پاسخ: {shortest_name}\n")
+
+===============================================
+
+job_counts = df['Job'].value_counts()
+question6 = f"تعداد هر شغل در این DataFrame به چه صورت است؟"
+print(question6)
+print(f"پاسخ:\n{job_counts}\n")
+
+===============================================
+
+drilling_engineer_count = df[df['Job'] == "Drilling engineer"].shape[0]
+drilling_engineer_percentage = (drilling_engineer_count / total_records) * 100
+question7 = f"درصد افرادی که شغل 'Drilling engineer' دارند چقدر است؟"
+print(question7)
+print(f"پاسخ: {drilling_engineer_percentage:.2f}%\n")
+
+===============================================
